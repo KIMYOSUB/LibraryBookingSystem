@@ -9,8 +9,8 @@ import java.sql.SQLException;
 public class DB_Connect {
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		String url = "jdbc:mysql://mobilekys.iptime.org:3306/test";
-		String user = "daniel";
-		String pass = "kyil5611";
+		String user = "id";
+		String pass = "password";
 		Connection con = null;
 		
 		Class.forName("org.gjt.mm.mysql.Driver");
