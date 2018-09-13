@@ -182,7 +182,7 @@ public class SeatStateFrame extends JFrame implements ActionListener, Runnable {
 		if(usedSeat == 0) {										//전 좌석이 비어있을 때
 			used = false;
 			for(int i = 0; i < 40; i++) {
-				pan[i].addMouseListener(new LabelAction(this, pan[i], i, used)); 
+				pan[i].addMouseListener(new LabelAction(this, i, used)); 
 			}
 		}
 		else {                                                 //한명이라도 있을 때
@@ -199,7 +199,7 @@ public class SeatStateFrame extends JFrame implements ActionListener, Runnable {
 						
 					}
 				}
-				pan[i].addMouseListener(new LabelAction(this, pan[i], i, used));	
+				pan[i].addMouseListener(new LabelAction(this, i, used));	
 			}
 		}
 	}
@@ -312,12 +312,10 @@ public class SeatStateFrame extends JFrame implements ActionListener, Runnable {
 	}
 	
 	class LabelAction extends MouseAdapter {
-		SeatFrame pan;
 		SeatStateFrame ssf;
 		int i;
 		boolean used;
-		LabelAction(SeatStateFrame ssf, SeatFrame pan, int i, boolean used) { //pan  
-			this.pan = pan;
+		LabelAction(SeatStateFrame ssf, int i, boolean used) { //pan  
 			this.i = i;
 			this.used = used;
 			this.ssf = ssf;
@@ -343,7 +341,7 @@ public class SeatStateFrame extends JFrame implements ActionListener, Runnable {
 	           			Main.getM().lastElement().setSeatNume(i);
 	           			Query_Statement.setLoginState(id, true);	
 	           			Query_Statement.setSeatNum(id, i);
-	           			//pan.imgRead(getClass().getClassLoader().getResource("seatOn.png"));//dbchecking에서 하기 때문에 일단 불필요
+	         
 	           			main.showConfirmFrame(ssf, main);
 	           		}
 	           		else {
