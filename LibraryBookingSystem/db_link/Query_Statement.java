@@ -176,43 +176,6 @@ public class Query_Statement {
 		}
 	}
 	
-//-------------------------------------------------------------------------------------------------------------------------------------
-/*
-	public static boolean getLoginState(int num) {               //로그인 상태 불러오는 쿼리
-		
-		boolean flag = false;
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String sql = null;
-		int getState;
-		try {
-			con = db_link.DB_Connect.getConnection();
-			sql = "select state from member where num=?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, num);
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				getState = rs.getInt("state");
-				if(getState == 1) {
-					flag = true;
-				}
-				else {
-					flag = false;
-				}
-			}
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			if(rs != null) try{rs.close();}catch(SQLException sqle){}            // R.esult;set 객체 해제
-			
-			if(pstmt != null) try{pstmt.close();}catch(SQLException sqle){}   // PreparedStatement 객체 해제
-			
-			if(con != null) try{con.close();}catch(SQLException sqle){}   // Connection 해제
-		}
-		return flag;
-	}*/
 //----------------------------------------------------------------------------------------------------------------------------------
 	public static boolean getLoginState(String id) {               //로그인 상태 불러오는 쿼리(id)
 
@@ -250,42 +213,6 @@ public class Query_Statement {
 		return flag;
 	}
 
-//-----------------------------------------------------------------------------------------------------------------------------------
-/*	public static boolean getLoginState_sn(int seatNum) {               //로그인 상태 불러오는 쿼리
-	
-		boolean flag = false;
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String sql = null;
-		int getState;
-		try {
-			con = db_link.DB_Connect.getConnection();
-			sql = "select state from member where seatNum=?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, seatNum);
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				getState = rs.getInt("state");
-				if(getState == 1) {
-					flag = true;
-				}
-				else {
-					flag = false;
-				}
-			}
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			if(rs != null) try{rs.close();}catch(SQLException sqle){}            // R.esult;set 객체 해제
-			
-			if(pstmt != null) try{pstmt.close();}catch(SQLException sqle){}   // PreparedStatement 객체 해제
-			
-			if(con != null) try{con.close();}catch(SQLException sqle){}   // Connection 해제
-		}
-		return flag;
-	}*/
 //--------------------------------------------------------------------------------------------------------------------------------------
 	public static boolean signUp(String id, String password) {               //아이디와 비밀번호 받아와서 DB에 저장
 		Connection con = null;
