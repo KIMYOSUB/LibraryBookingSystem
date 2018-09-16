@@ -9,7 +9,7 @@
 
 >회원가입후 바로 사용할 수 있게 만들수도 있지만 혹여나 프로그램이 남용될 수 있으므로 회원가입 후 제가 DB테이블에서 속성adminAllow 필드값을 null에서 1로 바뀌어야 사용할 수 있게 만들었습니다. 그러므로 실행 프로그램 이용시 밑에 제공되는 회원정보로 이용해주세요.<br>
 <strong>ID : guest, PW: 1234</strong> <br>
-![db_member](https://user-images.githubusercontent.com/17807121/45599895-80627c00-ba2e-11e8-87f0-e776a211634f.jpg)
+![db_member](https://user-images.githubusercontent.com/17807121/45599997-a557ee80-ba30-11e8-9d57-0870060495fa.jpg)
 
 <ul>
 <li> 로그인 후 빈좌석을 선택한다.</li>
